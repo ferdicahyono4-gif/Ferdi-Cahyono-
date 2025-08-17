@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Felicia – Real-Time Forex Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { background: #0f172a; color: #cbd5e1; }
+    .glass { background: rgba(255,255,255,.05); backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="font-sans">
+
+<header class="bg-slate-900/80 glass p-4 shadow-2xl sticky top-0 z-50">
+  <h1 class="text-3xl font-bold text-center text-sky-400">
+    <i class="fa-solid fa-chart-line mr-2"></i>Felicia Forex
+  </h1>
+</header>
+
+<main class="max-w-7xl mx-auto p-4 grid gap-6 lg:grid-cols-3">
+
+  <!-- Chart real-time -->
+  <section class="lg:col-span-2 bg-slate-800/60 p-4 rounded-xl">
+    <h2 class="text-xl font-semibold mb-2">📊 Live Chart</h2>
+    <iframe
+      src="https://www.fxstreet.com/rates-charts/chart?type=interactive&pair=EURUSD"
+      class="w-full h-96 rounded"
+      frameborder="0"
+      allowfullscreen
+      title="Real-time EUR/USD Chart">
+    </iframe>
+  </section>
+
+  <!-- Live quotes (1 600+ pairs) -->
+  <section class="bg-slate-800/60 p-4 rounded-xl">
+    <h2 class="text-xl font-semibold mb-2">💱 Live Quotes</h2>
+    <iframe
+      src="https://www.fxstreet.com/rates-charts/rates?type=widget"
+      class="w-full h-96 rounded"
+      frameborder="0"
+      title="Real-time FX Rates">
+    </iframe>
+  </section>
+
+  <!-- Currency converter -->
+  <section class="lg:col-span-3 bg-slate-800/60 p-4 rounded-xl">
+    <h2 class="text-xl font-semibold mb-3">🔄 Konverter Mata Uang</h2>
+    <iframe
+      src="https://www.fxstreet.com/rates-charts/currency-converter"
+      class="w-full h-64 rounded"
+      frameborder="0"
+      title="Real-time Currency Converter">
+    </iframe>
+  </section>
+
+  <!-- Berita & analisis -->
+  <section class="lg:col-span-3 bg-slate-800/60 p-4 rounded-xl">
+    <h2 class="text-xl font-semibold mb-3">📰 Berita & Analisis</h2>
+    <iframe
+      src="https://www.fxstreet.com/news/latest-news?type=widget"
+      class="w-full h-96 rounded"
+      frameborder="0"
+      title="Real-time FX News">
+    </iframe>
+  </section>
+
+</main>
+
+<footer class="text-center py-6 text-slate-400 text-sm">
+  Data real-time interbank &copy; FXStreet – Felicia Forex Dashboard 2025
+</footer>
+
+</body>
+</html>
