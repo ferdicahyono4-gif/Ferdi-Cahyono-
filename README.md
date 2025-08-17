@@ -1,2 +1,0 @@
-# Ferdi-Cahyono-
-Bos muda
